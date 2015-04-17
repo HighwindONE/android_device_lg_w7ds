@@ -64,6 +64,8 @@ TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_NEON := true
 STRICT_ALIASING := true
 
+# RIL
+BOARD_RIL_CLASS := ../../../device/lge/w7/ril/
 
 # Kernel image
 BOARD_KERNEL_SEPARATED_DT := true
