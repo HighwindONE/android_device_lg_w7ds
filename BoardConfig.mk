@@ -82,6 +82,9 @@ COMMON_GLOBAL_CFLAGS += \
     -DBOARD_CHARGING_CMDLINE_NAME='"androidboot.mode"' \
     -DBOARD_CHARGING_CMDLINE_VALUE='"chargerlogo"'
 
+# Charger
+BOARD_CHARGING_MODE_BOOTING_LPM := /sys/mmi_lpm/lpm_mode
+
 # Global flags
 COMMON_GLOBAL_CFLAGS +=  -DLG_CAMERA_HARDWARE
 

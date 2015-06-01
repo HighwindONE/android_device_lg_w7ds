@@ -13,6 +13,9 @@ $(call inherit-product, vendor/slim/config/common_full_phone.mk)
 # Enhanced NFC
 $(call inherit-product, vendor/slim/config/nfc_enhanced.mk)
 
+# Configure dalvik heap
+$(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
 # Release name
 PRODUCT_RELEASE_NAME := LG L90
 PRODUCT_DEVICE := w7
