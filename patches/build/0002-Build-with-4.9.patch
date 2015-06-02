@@ -1,0 +1,42 @@
+From ea65e29dc697e1271953b56bad01d97accc19bb7 Mon Sep 17 00:00:00 2001
+From: Tony Malagisi <mtb3000gt@gmail.com>
+Date: Sat, 2 May 2015 13:08:14 -0400
+Subject: [PATCH 2/2] Build with 4.9
+
+PS2: Make it optional between 4.8 and 4.9 with the flag PLATFORM_LINARO_4.9 := true in the boardconfig.
+also removed setting others because at this point we only use 4.8 or 4.9 and I dont see that changing much in the near future
+because 5.0+ is still pretty unstable rom side.
+
+Change-Id: I6ad2f1ffc45cf482d97733d1cf454e5723811aab
+---
+ core/combo/TARGET_linux-arm.mk | 11 +++++++----
+ 1 file changed, 7 insertions(+), 4 deletions(-)
+
+diff --git a/core/combo/TARGET_linux-arm.mk b/core/combo/TARGET_linux-arm.mk
+index 95eb014..14832e3 100644
+--- a/core/combo/TARGET_linux-arm.mk
++++ b/core/combo/TARGET_linux-arm.mk
+@@ -34,13 +34,16 @@ ifeq ($(strip $(TARGET_$(combo_2nd_arch_prefix)ARCH_VARIANT)),)
+ TARGET_$(combo_2nd_arch_prefix)ARCH_VARIANT := armv5te
+ endif
+ 
+-# Decouple NDK library selection with platform compiler version
++ifeq ($(PLATFORM_LINARO_4.9),true)
++$(combo_2nd_arch_prefix)TARGET_NDK_GCC_VERSION := 4.9
++else
+ $(combo_2nd_arch_prefix)TARGET_NDK_GCC_VERSION := 4.8
++endif
+ 
+-ifeq ($(strip $(TARGET_GCC_VERSION_EXP)),)
+-$(combo_2nd_arch_prefix)TARGET_GCC_VERSION := 4.8
++ifeq ($(PLATFORM_LINARO_4.9),true)
++$(combo_2nd_arch_prefix)TARGET_GCC_VERSION := 4.9
+ else
+-$(combo_2nd_arch_prefix)TARGET_GCC_VERSION := $(TARGET_GCC_VERSION_EXP)
++$(combo_2nd_arch_prefix)TARGET_GCC_VERSION := 4.8
+ endif
+ 
+ TARGET_ARCH_SPECIFIC_MAKEFILE := $(BUILD_COMBOS)/arch/$(TARGET_$(combo_2nd_arch_prefix)ARCH)/$(TARGET_$(combo_2nd_arch_prefix)ARCH_VARIANT).mk
+-- 
+1.9.1
+
