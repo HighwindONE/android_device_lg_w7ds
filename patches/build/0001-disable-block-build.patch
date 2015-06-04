@@ -1,0 +1,25 @@
+From 3e2ab5d45ed5a9698390595652eb9c466301c2e1 Mon Sep 17 00:00:00 2001
+From: Kain Highwind <highwind.1977@gmail.com>
+Date: Thu, 4 Jun 2015 19:58:06 +0200
+Subject: [PATCH] disable block build
+
+Change-Id: I78444e075c1c37137beae7f35efc51e20340b712
+---
+ core/Makefile | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/core/Makefile b/core/Makefile
+index 72ed396..1aa158d 100644
+--- a/core/Makefile
++++ b/core/Makefile
+@@ -1692,7 +1692,6 @@ $(INTERNAL_OTA_PACKAGE_TARGET): $(BUILT_TARGET_FILES_PACKAGE) $(DISTTOOLS)
+ 	@echo -e ${CL_YLW}"Package OTA:"${CL_RST}" $@"
+ 	$(hide) MKBOOTIMG=$(MKBOOTIMG) \
+ 	   $(OTA_FROM_TARGET_SCRIPT) -v \
+-	   --block \
+ 	   -p $(HOST_OUT) \
+ 	   -k $(KEY_CERT_PAIR) \
+ 	   --backup=$(backuptool) \
+-- 
+1.9.1
+
