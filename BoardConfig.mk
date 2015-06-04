@@ -55,8 +55,10 @@ TARGET_BOOTLOADER_BOARD_NAME := w7
 TARGET_GLOBAL_CFLAGS += -march=armv7-a -mtune=cortex-a7 -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -march=armv7-a -mtune=cortex-a7 -mfpu=neon -mfloat-abi=softfp
 TARGET_USE_O3 := true
-ENABLE_GRAPHITE := true
+ENABLE_GRAPHITE := false
 SUPPRES_UNUSED_WARNING := true
+TARGET_GCC_VERSION_EXP := 4.8
+TARGET_USE_PIPE := true
 
 # My Architecture additions [experimental]
 OPT_MEMORY := true

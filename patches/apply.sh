@@ -63,6 +63,7 @@ cd $LOCAL_PATH
 
 pre_clean bionic
 pre_clean build
+pre_clean libcore
 
 cd $patches
 
@@ -75,4 +76,5 @@ cd $LOCAL_PATH
 
 apply_all bionic 
 apply_all build
+apply_all libcore
 
