@@ -57,6 +57,8 @@ TARGET_GLOBAL_CPPFLAGS += -march=armv7-a -mtune=cortex-a7 -mfpu=neon -mfloat-abi
 TARGET_USE_O3 := true
 ENABLE_GRAPHITE := true
 SUPPRES_UNUSED_WARNING := true
+TARGET_GCC_VERSION_EXP := 4.8
+TARGET_USE_PIPE := true
 
 # My Architecture additions [experimental]
 OPT_MEMORY := true
