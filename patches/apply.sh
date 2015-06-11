@@ -61,7 +61,6 @@ echo -e $CL_GRN"get rid of any uncommitted or unstaged changes"$CL_RST
 patches=$PWD
 cd $LOCAL_PATH
 
-pre_clean bionic
 pre_clean build
 
 cd $patches
@@ -72,8 +71,6 @@ cd $LOCAL_PATH
 
 # now apply it 
 
-
-apply_all bionic 
 apply_all build
 
 
