@@ -61,9 +61,14 @@ echo -e $CL_GRN"get rid of any uncommitted or unstaged changes"$CL_RST
 patches=$PWD
 cd $LOCAL_PATH
 
+
 pre_clean bionic
 pre_clean build
+pre_clean frameworks/av/
+pre_clean frameworks/base/
+pre_clean frameworks/native/
 pre_clean libcore
+
 
 cd $patches
 
@@ -76,5 +81,8 @@ cd $LOCAL_PATH
 
 apply_all bionic 
 apply_all build
+apply_all frameworks/av/
+apply_all frameworks/base/
+apply_all frameworks/native/
 apply_all libcore
 
