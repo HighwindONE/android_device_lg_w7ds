@@ -199,10 +199,6 @@ PRODUCT_PACKAGES += \
     FM2 \
     FMRecord
 
-# GPS
-PRODUCT_PACKAGES += \
-    gps.msm8226
-
 # HAL
 PRODUCT_PACKAGES += \
     copybit.msm8226\
@@ -354,13 +350,9 @@ NFCEE_ACCESS_PATH := device/lge/w7/prebuilt/etc/nfcee_access.xml
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.timed.enable=true
 
-# Enable KSM by default
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.ksm.default=1
-
 # Screen density
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := xhdpi
+PRODUCT_AAPT_CONFIG := normal
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 $(call inherit-product, vendor/lge/w7/w7-vendor.mk)
 
