@@ -31,7 +31,7 @@ import com.android.internal.telephony.uicc.IccCardApplicationStatus;
 import com.android.internal.telephony.uicc.IccCardStatus;
 
 /**
- * Custom Qualcomm RIL for G3
+ * Custom Qualcomm RIL for LG Optimus L90, based on LG G3 custom RIL
  *
  * {@hide}
  */
