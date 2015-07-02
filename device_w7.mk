@@ -89,7 +89,8 @@ PRODUCT_COPY_FILES += \
     device/lge/w7/rootdir/init.w7.rc:root/init.w7.rc \
     device/lge/w7/rootdir/init.w7.rc:root/init.w7.rc \
     device/lge/w7/rootdir/init.w7.usb.rc:root/init.w7.usb.rc \
-    device/lge/w7/rootdir/ueventd.w7.rc:root/ueventd.w7.rc
+    device/lge/w7/rootdir/ueventd.w7.rc:root/ueventd.w7.rc \
+    device/lge/w7/007zRAM:system/etc/init.d/007zRAM
 
 # OTA
 PRODUCT_COPY_FILES += \
