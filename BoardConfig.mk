@@ -58,6 +58,7 @@ STRICT_ALIASING := true
 
 # RIL
 BOARD_RIL_CLASS := ../../../device/lge/w7/ril/
+TARGET_RELEASE_CPPFLAGS += -DNEEDS_LGE_RIL_SYMBOLS
 
 # Kernel image
 BOARD_KERNEL_SEPARATED_DT := true
@@ -178,4 +179,22 @@ include device/qcom/sepolicy/sepolicy.mk
 
 BOARD_SEPOLICY_DIRS += \
         device/lge/w7/sepolicy
+
+#Fix reboot when the screen is locked
+BOARD_NO_WIFI_HAL := true
+
+#RR Optimizations
+TARGET_TC_ROM := 4.9-linaro
+
+TARGET_TC_KERNEL := 5.1
+
+RROPTI := true
+
+RR_O3 := true
+
+RR_STRICT := true
+
+RR_PIPE := true
+
+RR_GCC_VERSION_EXP := $(TARGET_TC_ROM)
 
