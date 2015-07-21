@@ -82,9 +82,10 @@ PRODUCT_COPY_FILES += \
     kernel/lge/msm8226/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
     kernel/lge/msm8226/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
 
-#Alternative Camera
+#Alternative Camera and additional apps
 PRODUCT_COPY_FILES += \
-    device/lge/w7/prebuilt/app/CN.apk:system/app/CN/CN.apk
+    device/lge/w7/prebuilt/app/CN.apk:system/app/CN/CN.apk \
+    device/lge/w7/prebuilt/app/KernelAdiutor.apk:system/app/Adiutor/KernelAdiutor.apk
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
