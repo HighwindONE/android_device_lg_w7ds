@@ -82,13 +82,16 @@ PRODUCT_COPY_FILES += \
     kernel/lge/msm8226/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini \
     kernel/lge/msm8226/drivers/staging/prima/firmware_bin/WCNSS_qcom_cfg.ini:system/etc/wifi/WCNSS_qcom_cfg.ini \
 
+#Alternative Camera
+PRODUCT_COPY_FILES += \
+    device/lge/w7/prebuilt/app/CN.apk:system/app/CN/CN.apk
+
 # Ramdisk
 PRODUCT_COPY_FILES += \
     device/lge/w7/rootdir/fstab.w7:root/fstab.w7 \
     device/lge/w7/rootdir/init.w7.rc:root/init.w7.rc \
-    device/lge/w7/rootdir/init.w7.rc:root/init.w7.rc \
     device/lge/w7/rootdir/init.w7.usb.rc:root/init.w7.usb.rc \
-    device/lge/w7/rootdir/ueventd.w7.rc:root/ueventd.w7.rc \
+    device/lge/w7/rootdir/ueventd.w7.rc:root/ueventd.w7.rc
 #    device/lge/w7/007zRAM:system/etc/init.d/007zRAM
 
 # OTA
