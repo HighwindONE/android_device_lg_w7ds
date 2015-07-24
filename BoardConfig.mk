@@ -184,17 +184,5 @@ BOARD_SEPOLICY_DIRS += \
 BOARD_NO_WIFI_HAL := true
 
 #RR Optimizations
-TARGET_TC_ROM := 4.9-linaro
 
-TARGET_TC_KERNEL := 5.1
-
-RROPTI := true
-
-RR_O3 := true
-
-RR_STRICT := true
-
-RR_PIPE := true
-
-RR_GCC_VERSION_EXP := $(TARGET_TC_ROM)
 
