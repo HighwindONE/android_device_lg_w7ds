@@ -183,6 +183,5 @@ BOARD_SEPOLICY_DIRS += \
 #Fix reboot when the screen is locked
 BOARD_NO_WIFI_HAL := true
 
-#RR Optimizations
-
-
+# Charger
+BOARD_CHARGING_MODE_BOOTING_LPM := /sys/mmi_lpm/lpm_mode

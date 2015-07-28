@@ -2,6 +2,11 @@
 # system.prop for LG Optimus L90
 #
 
+# temporary product device overlay
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.product.device=w7 \
+	ro.product.model=w7
+
 # Audio
 PRODUCT_PROPERTY_OVERRIDES += \
     audio.offload.24bit.enable=false \

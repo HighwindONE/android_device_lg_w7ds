@@ -84,8 +84,8 @@ PRODUCT_COPY_FILES += \
 
 #Alternative Camera and additional apps
 PRODUCT_COPY_FILES += \
-    device/lge/w7/prebuilt/app/CN.apk:system/app/CN/CN.apk \
-    device/lge/w7/prebuilt/app/KernelAdiutor.apk:system/app/Adiutor/KernelAdiutor.apk
+    device/lge/w7/prebuilt/app/CN.apk:system/app/CN/CN.apk
+#    device/lge/w7/prebuilt/app/KernelAdiutor.apk:system/app/Adiutor/KernelAdiutor.apk
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
